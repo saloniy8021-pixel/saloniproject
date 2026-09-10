@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#dee2f5", "surface-container": "#1a1f2d", "surface-variant": "#303443", "secondary": "#4ae176", "on-primary-fixed-variant": "#003cac", "tertiary": "#ffb95f", "on-error-container": "#ffdad6", "inverse-surface": "#dee2f5", "on-secondary-container": "#004119", "on-error": "#690005", "surface-container-low": "#161b29", "on-primary-container": "#000318", "on-secondary": "#003915", "primary-container": "#2f6bff", "on-tertiary-fixed-variant": "#653e00", "tertiary-fixed": "#ffddb8", "surface": "#0e1320", "on-background": "#dee2f5", "background": "#0e1320", "error": "#ffb4ab", "surface-container-high": "#252a38", "primary-fixed-dim": "#b5c4ff", "tertiary-fixed-dim": "#ffb95f", "surface-container-highest": "#303443", "on-primary": "#00297a", "outline-variant": "#434655", "tertiary-container": "#a66900", "on-tertiary-fixed": "#2a1700", "secondary-container": "#00b954", "on-tertiary": "#472a00", "inverse-on-surface": "#2b303e", "surface-tint": "#b5c4ff", "on-tertiary-container": "#ffffff", "error-container": "#93000a", "secondary-fixed-dim": "#4ae176", "primary": "#b5c4ff", "surface-dim": "#0e1320", "primary-fixed": "#dbe1ff", "on-secondary-fixed": "#002109", "surface-container-lowest": "#090e1b", "on-primary-fixed": "#00174d", "secondary-fixed": "#6bff8f", "inverse-primary": "#0051e0", "surface-bright": "#343947", "outline": "#8d90a1", "on-surface-variant": "#c3c5d8", "on-secondary-fixed-variant": "#005321" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.375rem", "margin": "0.75rem", "space-md": "0.5rem", "space-lg": "0.75rem", "gutter-compact": "0.25rem", "space-xs": "0.25rem", "space-xl": "1rem", "gutter": "0.5rem" }, "fontFamily": { "headline-xl": [ "Inter" ], "data-mono-md": [ "JetBrains Mono" ], "data-mono-xs": [ "JetBrains Mono" ], "label-caps": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "data-mono-lg": [ "JetBrains Mono" ], "data-mono-sm": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "headline-lg": [ "Inter" ], "headline-sm": [ "Inter" ] }, "fontSize": { "headline-xl": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "data-mono-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "data-mono-xs": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-caps": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "data-mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "data-mono-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-lg": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 h-16 bg-surface-container-lowest border-b border-surface-container-highest px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><img alt="Chandrayaan-2 Registration Tool Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZw_txJ_4uL6lwS3jFGLSLsCWU6aG8PYtAEvEKliNc2GWKHtxgEYW9Q3LdWYN4hWlAiabuaH_ehK_icMhUgvIb_6W0fczQfME-WbiphaXKVbIdOYccgug3eTfjWaYStkfL6sR-9yWhu6YYTZsrWW-9u21JULAFDI3dbCgbpLRQAcZcfLJ2-irmfOO76hA4iyg2NR2ruZ5XbDAlwHAD-zzxIPPmwLcNdvzuJywBDKlqMuYVa3ftL8rC"/><div class="flex items-center gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chandrayaan-2 Registration Tool</span><span class="font-label-caps text-label-caps uppercase px-space-sm py-0.5 bg-surface-container border border-surface-variant text-outline rounded">OHRC ↔ NAC</span></div><nav class="hidden xl:flex items-center gap-space-xl ml-space-xl text-on-surface-variant font-headline-sm text-headline-sm" data-active-classes="text-primary border-primary"><a aria-current="page" class="transition-colors pb-0.5 text-primary border-primary" data-path="optical-registration" href="#">Optical Registration</a><a class="hover:text-on-surface transition-colors pb-0.5" data-path="matrix-solver" href="#">Matrix Solver</a><a class="hover:text-on-surface transition-colors pb-0.5" data-path="sub-pixel-tie-points" href="#">Sub-Pixel Tie Points</a><a class="hover:text-on-surface transition-colors pb-0.5" data-path="ephemeris-telemetry" href="#">Ephemeris &amp; Orbit</a></nav></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low border border-surface-container-highest px-space-md py-1 rounded"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-data-mono-xs text-data-mono-xs text-on-surface-variant tracking-wider uppercase">RTX 3060 · CUDA Active</span></div><div class="flex items-center bg-surface-container border border-surface-container-highest p-0.5 rounded"><button aria-label="Light mode" class="p-1 text-outline hover:text-on-surface rounded transition-colors" type="button"><span class="material-symbols-outlined text-[16px] block">light_mode</span></button><button aria-label="Dark mode" class="p-1 bg-surface-container-high text-primary rounded transition-colors" type="button"><span class="material-symbols-outlined text-[16px] block">dark_mode</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-[280px] bg-surface-container-low border-r border-surface-container-highest flex flex-col z-40"><div class="px-space-lg py-space-md border-b border-surface-container-highest flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-outline tracking-wider">Payload Viewports</span><span class="font-data-mono-xs text-data-mono-xs text-secondary bg-secondary/10 px-1 border border-secondary/30 rounded">SYNCED</span></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-lowest p-space-sm rounded border border-surface-container-highest mb-space-sm"><div class="flex justify-between items-center mb-1"><span class="font-label-caps text-label-caps uppercase text-outline">Target Ingest</span><span class="font-data-mono-xs text-data-mono-xs text-primary">CH2_OHRC_2023</span></div><div class="font-data-mono-sm text-data-mono-sm text-on-surface truncate">Orbit #4812_Strip_003.IMG</div></div><div class="bg-surface-container-lowest p-space-sm rounded border border-surface-container-highest"><div class="flex justify-between items-center mb-1"><span class="font-label-caps text-label-caps uppercase text-outline">Reference Base</span><span class="font-data-mono-xs text-data-mono-xs text-tertiary">LRO_NAC_MOSAIC</span></div><div class="font-data-mono-sm text-data-mono-sm text-on-surface truncate">NAC_ROI_S84_W021_V1.TIF</div></div></div><div class="px-space-lg py-space-xs"><span class="font-label-caps text-label-caps uppercase text-outline">Navigation &amp; Ops</span></div><nav class="flex-1 px-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors font-body-sm bg-surface-container-high text-primary border-l-2 border-primary" data-path="optical-registration" href="#"><span class="material-symbols-outlined text-[18px]">view_column</span>Optical Dual Alignment</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="matrix-solver" href="#"><span class="material-symbols-outlined text-[18px]">grid_3x3</span>3x3 Homography Grid</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="sub-pixel-tie-points" href="#"><span class="material-symbols-outlined text-[18px]">adjust</span>Tie-Points &amp; RANSAC</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ephemeris-telemetry" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>Ephemeris &amp; SPICE</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="calibration-residuals" href="#"><span class="material-symbols-outlined text-[18px]">query_stats</span>Error Residual Vector</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="export-mosaic" href="#"><span class="material-symbols-outlined text-[18px]">save_as</span>Export PDS4 Products</a></nav><div class="p-space-md border-t border-surface-container-highest bg-surface-container-lowest font-data-mono-xs text-data-mono-xs text-outline space-y-1"><div>EPHEMERIS: <span class="text-secondary">LUNAR-J2000</span></div><div>RMS RESIDUAL: <span class="text-tertiary">0.041 px</span></div><div class="text-on-surface-variant">STATION: <span class="text-on-surface">ISDA BLR-DSN32</span></div></div></aside><div class="pl-[280px]"><main class="relative pt-16 min-h-screen w-full bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Mission Telemetry Bar (Sub-header) -->
+<div class="w-full bg-surface-container-lowest px-margin py-2 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4 flex-wrap">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Mission: CHANDRAYAAN-2 ORBITER</span>
+</div>
+<div class="h-3 w-px bg-surface-variant"></div>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface-variant">TARGET REGION: <span class="text-on-surface font-semibold">MANZINUS C BASIN [84.2°S 21.4°W]</span></span>
+<div class="h-3 w-px bg-surface-variant"></div>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface-variant">SUBSOLAR ELEV: <span class="text-tertiary">54.2° N</span></span>
+<div class="h-3 w-px bg-surface-variant"></div>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded border border-secondary/30">CUDA SM_86 // CUBLAS ACCELERATED</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface-variant">CONVERGENCE: <span class="text-secondary font-semibold">0.041 px RMSE</span></span>
+<span class="font-label-caps text-label-caps bg-primary/10 text-primary px-2 py-0.5 rounded border border-primary/20">STEP 04 IN PROGRESS</span>
+</div>
+</div>
+<!-- Primary Mission Workspace Grid -->
+<div class="grid grid-cols-12 gap-gutter p-margin">
+<!-- LEFT COLUMN: Workflow Stepper & Project Metadata (col-span-12 lg:col-span-3 xl:col-span-3 flex flex-col gap-gutter) -->
+<aside class="col-span-12 lg:col-span-3 xl:col-span-3 flex flex-col gap-gutter">
+<!-- 12-Step Processing Pipeline Card -->
+<div class="bg-surface-container-low rounded p-3 flex flex-col">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-surface-variant/40">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Registration Pipeline</span>
+<span class="font-data-mono-xs text-data-mono-xs text-primary font-medium">3/12 OK</span>
+</div>
+<div class="flex flex-col space-y-1 font-body-sm text-body-sm">
+<!-- Step 1 Complete -->
+<div class="flex items-center justify-between px-2 py-1 rounded bg-surface-container-lowest/50 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-data-mono-xs text-[10px] font-bold">✓</span>
+<span class="text-on-surface line-through opacity-80">Tile Decimation &amp; RoI</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary">0.42s</span>
+</div>
+<!-- Step 2 Complete -->
+<div class="flex items-center justify-between px-2 py-1 rounded bg-surface-container-lowest/50 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-data-mono-xs text-[10px] font-bold">✓</span>
+<span class="text-on-surface line-through opacity-80">Radiometric Calibration</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary">1.18s</span>
+</div>
+<!-- Step 3 Complete -->
+<div class="flex items-center justify-between px-2 py-1 rounded bg-surface-container-lowest/50 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-data-mono-xs text-[10px] font-bold">✓</span>
+<span class="text-on-surface line-through opacity-80">Geometric Pre-Warp</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary">1.34s</span>
+</div>
+<!-- Step 4 Active Pulsing -->
+<div class="flex items-center justify-between px-2 py-1.5 rounded bg-primary-container text-white shadow-md">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-white text-on-primary-fixed-variant flex items-center justify-center font-data-mono-xs text-[10px] font-bold animate-pulse">4</span>
+<span class="font-semibold text-white">Intensity Normalization</span>
+</div>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+</span>
+</div>
+<!-- Step 5 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">5</span>
+<span>Keypoint Detect (SuperPoint)</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 6 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">6</span>
+<span>Feature Matching (SuperGlue)</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 7 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">7</span>
+<span>Outlier Rejection (RANSAC)</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 8 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">8</span>
+<span>Homography Estimation (H)</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 9 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">9</span>
+<span>Sub-pixel Refinement</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 10 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">10</span>
+<span>Bicubic Resampling &amp; Warp</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 11 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">11</span>
+<span>Photometric Blending</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+<!-- Step 12 Pending -->
+<div class="flex items-center justify-between px-2 py-1 rounded text-outline hover:text-on-surface-variant transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full border border-outline-variant text-outline flex items-center justify-center font-data-mono-xs text-[10px]">12</span>
+<span>GeoTIFF &amp; PDS4 Metadata</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline-variant">QUEUED</span>
+</div>
+</div>
+</div>
+<!-- Project Metadata Card -->
+<div class="bg-surface-container-low rounded p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-variant/40">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Project Telemetry</span>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary">VALIDATED</span>
+</div>
+<div class="space-y-2 font-data-mono-xs text-data-mono-xs">
+<div>
+<span class="text-outline block">OHRC TILE:</span>
+<span class="text-on-surface truncate block font-data-mono-sm text-data-mono-sm">CH2_OHRC_20230814T0412_T09.IMG</span>
+</div>
+<div>
+<span class="text-outline block">NAC BASE TILE:</span>
+<span class="text-on-surface truncate block font-data-mono-sm text-data-mono-sm">M1143256789LE_NAC.IMG</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-lowest p-1.5 rounded">
+<span class="text-outline block">FOOTPRINT OVERLAP</span>
+<span class="font-data-mono-md text-data-mono-md text-secondary font-semibold">94.2%</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded">
+<span class="text-outline block">SURFACE AREA</span>
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">14.8 km²</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded flex items-center justify-between">
+<span class="text-outline">GSD DIFFERENTIAL:</span>
+<span class="text-on-surface font-semibold">0.25m ↔ 0.50m / px</span>
+</div>
+<!-- Wireframe Overlap Graphic -->
+<div class="relative w-full h-20 bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-2">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 200 80">
+<!-- Reference Polygon NAC -->
+<polygon fill="currentColor" fill-opacity="0.05" points="20,15 170,10 185,65 35,70" stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.3" stroke-width="1.5"></polygon>
+<text class="font-data-mono-xs" fill="currentColor" fill-opacity="0.5" font-size="8" x="24" y="26">LROC NAC [0.50m]</text>
+<!-- Target Ingest OHRC -->
+<polygon fill="#4ae176" fill-opacity="0.15" points="35,18 160,14 175,60 50,65" stroke="#4ae176" stroke-width="1.5"></polygon>
+<text class="font-data-mono-xs" fill="#4ae176" font-size="8" x="55" y="45">CH2 OHRC (94.2% INTERSECT)</text>
+<!-- Center Reticle Marker -->
+<line stroke="#ffb95f" stroke-width="1" x1="95" x2="115" y1="37" y2="37"></line>
+<line stroke="#ffb95f" stroke-width="1" x1="105" x2="105" y1="27" y2="47"></line>
+<circle cx="105" cy="37" fill="none" r="4" stroke="#ffb95f" stroke-width="1"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Auxiliary System Telemetry -->
+<div class="bg-surface-container-low rounded p-3 text-on-surface-variant font-data-mono-xs text-data-mono-xs space-y-1">
+<div class="flex justify-between">
+<span class="text-outline">PDS4 SCHEMA:</span>
+<span class="text-on-surface">v1.19.0 (LUNAR_EXT)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">GEOMETRIC PROJ:</span>
+<span class="text-on-surface">POLAR_STEREOGRAPHIC</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">MEMORY POOL:</span>
+<span class="text-secondary">4.18 GB / 12.0 GB VRAM</span>
+</div>
+</div>
+</aside>
+<!-- RIGHT / CENTER WORKSPACE (col-span-12 lg:col-span-9 xl:col-span-9 flex flex-col gap-gutter) -->
+<div class="col-span-12 lg:col-span-9 xl:col-span-9 flex flex-col gap-gutter">
+<!-- 1. DATA LOADING SECTION: Two Sensor Cards -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Source: Chandrayaan-2 OHRC -->
+<div class="bg-surface-container-low rounded p-3 flex flex-col justify-between">
+<div class="flex items-start justify-between pb-2 mb-2 border-b border-surface-variant/40">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps bg-primary/20 text-primary px-1.5 py-0.5 rounded">INGEST SOURCE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">CH-2 OHRC (ISRO)</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline">ORBITER HIGH RESOLUTION CAMERA · STRIP 009</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-2 py-1 rounded font-body-sm text-body-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Change Tile
+            </button>
+</div>
+<div class="flex gap-3 items-center">
+<div class="relative w-24 h-24 shrink-0 rounded overflow-hidden bg-surface-container-lowest border border-surface-variant/30">
+<img alt="OHRC Panchromatic Raw Ingest" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAibcr0woqgFL6psbU-haeqaj6N2eMSCDfM9ALfk96Ttum2_TeA6nE3kxpLDJK6U5hk6iBN6WfwnYniIY0-fJexY_g5v0E_W81AgzJVNle4VJ9KInocyvfaSin2xO-CS-u9MoesWVl46MLBF3UueDc7FIIsR8OV7701FRS3tGywgDwK72mk5Y95mfJ2OBqYH1xMJLZeVMC6tLM8E7AyZshRzx0OS3JqHF3eEnlRHDqotM8Eyl_-78xo"/>
+<span class="absolute bottom-0.5 left-0.5 bg-surface-container-lowest/80 font-data-mono-xs text-[9px] px-1 text-primary">0.25 m/px</span>
+</div>
+<div class="flex-1 space-y-1 font-data-mono-xs text-data-mono-xs">
+<div class="flex justify-between">
+<span class="text-outline">ACQUISITION UTC:</span>
+<span class="text-on-surface">2023-08-14 04:12:08</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">SUN INCIDENCE:</span>
+<span class="text-tertiary">54.2° N-WEST</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">CENTER COORDINATES:</span>
+<span class="text-on-surface">12.345° S, 56.782° E</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">PIXEL BIT DEPTH:</span>
+<span class="text-on-surface">16-bit Uncalibrated DN</span>
+</div>
+<!-- Mini SVG Histogram Sparkline -->
+<div class="pt-1 flex items-center gap-2">
+<span class="text-outline text-[9px]">HIST:</span>
+<div class="flex-1 h-3 bg-surface-container-lowest rounded overflow-hidden flex items-end">
+<svg class="w-full h-full text-primary" preserveaspectratio="none" viewbox="0 0 100 12">
+<path d="M0,12 L5,11 L10,9 L15,10 L20,7 L25,4 L30,2 L35,1 L40,3 L45,6 L50,8 L55,7 L60,4 L65,2 L70,3 L75,5 L80,9 L85,11 L90,12 L95,12 L100,12 Z" fill="currentColor" opacity="0.75"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reference: LRO NAC -->
+<div class="bg-surface-container-low rounded p-3 flex flex-col justify-between">
+<div class="flex items-start justify-between pb-2 mb-2 border-b border-surface-variant/40">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps bg-tertiary/20 text-tertiary px-1.5 py-0.5 rounded">REFERENCE BASE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">LROC NAC (NASA / GSFC)</span>
+</div>
+<span class="font-data-mono-xs text-data-mono-xs text-outline">LUNAR RECONNAISSANCE ORBITER · CAMERA LEFT</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-2 py-1 rounded font-body-sm text-body-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Change Tile
+            </button>
+</div>
+<div class="flex gap-3 items-center">
+<div class="relative w-24 h-24 shrink-0 rounded overflow-hidden bg-surface-container-lowest border border-surface-variant/30">
+<img alt="LROC NAC Reference Tile Imagery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9RjuGnZlRzwivRCmx10GUQe6sAFPVLgfPLNjh50X8DWwlqKMz-XmNP-Uc6OGyezyROG0KTZoMSImRD-c0AAtLd57diQiHPx269VXLActKXH9rbi90F-mXI6YtNfY2N0smhiKNWGTjCiEIgSjwjZbXfMhW3zyFEupRMPG6_d0TjX1mjlisDPbPAE28ZIqk8oYhKlaHUAEyBInl4T8Dh98JcHnIBtVKILwhZAGd-yJoVS-kkPF1_oR"/>
+<span class="absolute bottom-0.5 left-0.5 bg-surface-container-lowest/80 font-data-mono-xs text-[9px] px-1 text-tertiary">0.50 m/px</span>
+</div>
+<div class="flex-1 space-y-1 font-data-mono-xs text-data-mono-xs">
+<div class="flex justify-between">
+<span class="text-outline">ACQUISITION UTC:</span>
+<span class="text-on-surface">2018-11-22 19:44:11</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">SUN INCIDENCE:</span>
+<span class="text-tertiary">48.0° N-WEST</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">CENTER COORDINATES:</span>
+<span class="text-on-surface">12.341° S, 56.780° E</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">CALIBRATION LEVEL:</span>
+<span class="text-on-surface">PDS Level-2 Georef</span>
+</div>
+<!-- Mini SVG Histogram Sparkline -->
+<div class="pt-1 flex items-center gap-2">
+<span class="text-outline text-[9px]">HIST:</span>
+<div class="flex-1 h-3 bg-surface-container-lowest rounded overflow-hidden flex items-end">
+<svg class="w-full h-full text-tertiary" preserveaspectratio="none" viewbox="0 0 100 12">
+<path d="M0,12 L8,12 L16,10 L24,8 L32,5 L40,2 L48,1 L56,2 L64,4 L72,7 L80,9 L88,11 L96,12 L100,12 Z" fill="currentColor" opacity="0.75"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. DUAL SYNCHRONIZED VIEWPORTS SECTION -->
+<section class="bg-surface-container-low rounded p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Synchronized Dual Inspection Viewports</span>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary bg-secondary/10 px-1.5 py-0.5 rounded border border-secondary/20">RETICLE SYNC ON</span>
+</div>
+<!-- Central Sync Toggle -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2 py-1 rounded">
+<span class="material-symbols-outlined text-primary text-[16px]">link</span>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface">SYNC VIEWPORTS (PAN &amp; ZOOM LOCK)</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-2 relative">
+<!-- LEFT VIEWPORT: CH-2 OHRC Target -->
+<div class="relative h-80 rounded overflow-hidden bg-surface-container-lowest flex flex-col group select-none">
+<img alt="OHRC High-Res Surface View" class="w-full h-full object-cover object-center filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAibcr0woqgFL6psbU-haeqaj6N2eMSCDfM9ALfk96Ttum2_TeA6nE3kxpLDJK6U5hk6iBN6WfwnYniIY0-fJexY_g5v0E_W81AgzJVNle4VJ9KInocyvfaSin2xO-CS-u9MoesWVl46MLBF3UueDc7FIIsR8OV7701FRS3tGywgDwK72mk5Y95mfJ2OBqYH1xMJLZeVMC6tLM8E7AyZshRzx0OS3JqHF3eEnlRHDqotM8Eyl_-78xo"/>
+<!-- Grid Reticle Overlay (Hairline Crosshair) -->
+<div class="absolute inset-0 pointer-events-none">
+<!-- Center crosshairs -->
+<div class="absolute top-1/2 left-0 right-0 h-px bg-primary/30"></div>
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-primary/30"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-primary/40 rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-primary/20 rounded-full"></div>
+<!-- Grid Tick Marks -->
+<div class="absolute top-2 left-2 font-data-mono-xs text-data-mono-xs bg-surface-container-lowest/80 px-1.5 py-0.5 rounded text-primary">
+                SOURCE: CH2_OHRC // ZOOM: 100% // 0.25 m/px
+              </div>
+<div class="absolute bottom-2 left-2 font-data-mono-xs text-data-mono-xs bg-surface-container-lowest/80 px-1.5 py-0.5 rounded text-on-surface flex items-center gap-2">
+<span>SCALE:</span>
+<span class="inline-block w-12 h-1 bg-white"></span>
+<span>100 m</span>
+</div>
+</div>
+<!-- Viewport Toolbar (Floating top-right) -->
+<div class="absolute top-2 right-2 flex items-center gap-1 bg-surface-container-low/90 backdrop-blur p-1 rounded">
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center bg-primary-container text-white rounded" title="Pan Hand Tool" type="button">
+<span class="material-symbols-outlined text-[16px]">pan_tool</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Toggle Graticule Reticle" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Rotate Sensor Raster" type="button">
+<span class="material-symbols-outlined text-[16px]">rotate_right</span>
+</button>
+</div>
+</div>
+<!-- RIGHT VIEWPORT: LROC NAC Reference -->
+<div class="relative h-80 rounded overflow-hidden bg-surface-container-lowest flex flex-col group select-none">
+<img alt="LROC NAC High-Res Surface View" class="w-full h-full object-cover object-center filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9RjuGnZlRzwivRCmx10GUQe6sAFPVLgfPLNjh50X8DWwlqKMz-XmNP-Uc6OGyezyROG0KTZoMSImRD-c0AAtLd57diQiHPx269VXLActKXH9rbi90F-mXI6YtNfY2N0smhiKNWGTjCiEIgSjwjZbXfMhW3zyFEupRMPG6_d0TjX1mjlisDPbPAE28ZIqk8oYhKlaHUAEyBInl4T8Dh98JcHnIBtVKILwhZAGd-yJoVS-kkPF1_oR"/>
+<!-- Grid Reticle Overlay -->
+<div class="absolute inset-0 pointer-events-none">
+<!-- Center crosshairs -->
+<div class="absolute top-1/2 left-0 right-0 h-px bg-tertiary/30"></div>
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-tertiary/30"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-tertiary/40 rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-tertiary/20 rounded-full"></div>
+<!-- Grid Tick Marks -->
+<div class="absolute top-2 left-2 font-data-mono-xs text-data-mono-xs bg-surface-container-lowest/80 px-1.5 py-0.5 rounded text-tertiary">
+                REFERENCE: LROC_NAC // ZOOM: 100% // 0.50 m/px
+              </div>
+<div class="absolute bottom-2 left-2 font-data-mono-xs text-data-mono-xs bg-surface-container-lowest/80 px-1.5 py-0.5 rounded text-on-surface flex items-center gap-2">
+<span>SCALE:</span>
+<span class="inline-block w-24 h-1 bg-white"></span>
+<span>200 m</span>
+</div>
+</div>
+<!-- Viewport Toolbar (Floating top-right) -->
+<div class="absolute top-2 right-2 flex items-center gap-1 bg-surface-container-low/90 backdrop-blur p-1 rounded">
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center bg-primary-container text-white rounded" title="Pan Hand Tool" type="button">
+<span class="material-symbols-outlined text-[16px]">pan_tool</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Toggle Graticule Reticle" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+</button>
+<button class="w-6 h-6 flex items-center justify-center hover:bg-surface-container-high text-on-surface rounded" title="Rotate Sensor Raster" type="button">
+<span class="material-symbols-outlined text-[16px]">rotate_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. MATCH OVERVIEW & RANSAC VISUALIZATION SECTION -->
+<section class="bg-surface-container-low rounded p-3 flex flex-col gap-2">
+<div class="flex flex-wrap items-center justify-between gap-2 pb-1 border-b border-surface-variant/40">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">SuperPoint &amp; SuperGlue Optical Correspondence</span>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface">RANSAC E-Matrix Threshold: 1.5 px</span>
+</div>
+<!-- Stats Strip -->
+<div class="flex flex-wrap items-center gap-2 font-data-mono-xs text-data-mono-xs">
+<span class="text-on-surface">MATCHES: <strong class="text-white">1,247</strong></span>
+<span class="bg-secondary/15 text-secondary px-1.5 py-0.5 rounded border border-secondary/30 font-semibold">INLIERS: 1,083 (86.8%)</span>
+<span class="bg-error/15 text-error px-1.5 py-0.5 rounded border border-error/30 font-semibold">OUTLIERS: 164 (13.2%)</span>
+<span class="text-outline">CONFIDENCE: <strong class="text-tertiary">0.81</strong></span>
+<span class="text-outline">RMSE: <strong class="text-secondary">0.64 px</strong></span>
+</div>
+</div>
+<!-- Split-Pane Correspondence Tie-Point Canvas -->
+<div class="relative w-full h-72 rounded bg-surface-container-lowest overflow-hidden flex items-stretch">
+<!-- Left OHRC Half -->
+<div class="w-1/2 h-full relative overflow-hidden border-r border-surface-variant/50">
+<img alt="OHRC Match Pane" class="w-full h-full object-cover object-center opacity-85" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAibcr0woqgFL6psbU-haeqaj6N2eMSCDfM9ALfk96Ttum2_TeA6nE3kxpLDJK6U5hk6iBN6WfwnYniIY0-fJexY_g5v0E_W81AgzJVNle4VJ9KInocyvfaSin2xO-CS-u9MoesWVl46MLBF3UueDc7FIIsR8OV7701FRS3tGywgDwK72mk5Y95mfJ2OBqYH1xMJLZeVMC6tLM8E7AyZshRzx0OS3JqHF3eEnlRHDqotM8Eyl_-78xo"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/80 px-2 py-0.5 rounded font-data-mono-xs text-primary">CH2_OHRC (TARGET)</div>
+</div>
+<!-- Right NAC Half -->
+<div class="w-1/2 h-full relative overflow-hidden">
+<img alt="NAC Match Pane" class="w-full h-full object-cover object-center opacity-85" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9RjuGnZlRzwivRCmx10GUQe6sAFPVLgfPLNjh50X8DWwlqKMz-XmNP-Uc6OGyezyROG0KTZoMSImRD-c0AAtLd57diQiHPx269VXLActKXH9rbi90F-mXI6YtNfY2N0smhiKNWGTjCiEIgSjwjZbXfMhW3zyFEupRMPG6_d0TjX1mjlisDPbPAE28ZIqk8oYhKlaHUAEyBInl4T8Dh98JcHnIBtVKILwhZAGd-yJoVS-kkPF1_oR"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest/80 px-2 py-0.5 rounded font-data-mono-xs text-tertiary">LROC_NAC (REF)</div>
+</div>
+<!-- Interactive SVG Tie-Point Vectors Overlaid across both halves -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 800 288">
+<!-- Grid Reference Line center divider -->
+<line stroke="#303443" stroke-dasharray="4 4" stroke-width="1.5" x1="400" x2="400" y1="0" y2="288"></line>
+<!-- Inlier Vector Lines (Green) -->
+<!-- Crater Rim Group A -->
+<g opacity="0.85" stroke="#4ae176" stroke-width="1.2">
+<line x1="210" x2="590" y1="80" y2="78"></line>
+<line x1="225" x2="605" y1="95" y2="92"></line>
+<line x1="195" x2="575" y1="110" y2="108"></line>
+<line x1="230" x2="610" y1="70" y2="68"></line>
+<!-- Crater Center Group B -->
+<line x1="310" x2="690" y1="140" y2="138"></line>
+<line x1="290" x2="670" y1="165" y2="162"></line>
+<line x1="325" x2="705" y1="180" y2="178"></line>
+<line x1="270" x2="650" y1="150" y2="148"></line>
+<!-- Southern Regolith Field C -->
+<line x1="140" x2="520" y1="210" y2="208"></line>
+<line x1="160" x2="540" y1="230" y2="228"></line>
+<line x1="180" x2="560" y1="195" y2="192"></line>
+<line x1="120" x2="500" y1="240" y2="238"></line>
+<!-- Northern Ridge Field D -->
+<line x1="260" x2="640" y1="35" y2="34"></line>
+<line x1="290" x2="670" y1="45" y2="44"></line>
+<line x1="340" x2="720" y1="30" y2="28"></line>
+<line x1="180" x2="560" y1="50" y2="48"></line>
+</g>
+<!-- Inlier Circles on Left and Right -->
+<g fill="#4ae176">
+<!-- Left Anchor Points -->
+<circle cx="210" cy="80" r="2.5"></circle>
+<circle cx="225" cy="95" r="2.5"></circle>
+<circle cx="195" cy="110" r="2.5"></circle>
+<circle cx="230" cy="70" r="2.5"></circle>
+<circle cx="310" cy="140" r="2.5"></circle>
+<circle cx="290" cy="165" r="2.5"></circle>
+<circle cx="325" cy="180" r="2.5"></circle>
+<circle cx="270" cy="150" r="2.5"></circle>
+<circle cx="140" cy="210" r="2.5"></circle>
+<circle cx="160" cy="230" r="2.5"></circle>
+<circle cx="180" cy="195" r="2.5"></circle>
+<circle cx="120" cy="240" r="2.5"></circle>
+<!-- Right Correlated Points -->
+<circle cx="590" cy="78" r="2.5"></circle>
+<circle cx="605" cy="92" r="2.5"></circle>
+<circle cx="575" cy="108" r="2.5"></circle>
+<circle cx="610" cy="68" r="2.5"></circle>
+<circle cx="690" cy="138" r="2.5"></circle>
+<circle cx="670" cy="162" r="2.5"></circle>
+<circle cx="705" cy="178" r="2.5"></circle>
+<circle cx="650" cy="148" r="2.5"></circle>
+<circle cx="520" cy="208" r="2.5"></circle>
+<circle cx="540" cy="228" r="2.5"></circle>
+<circle cx="560" cy="192" r="2.5"></circle>
+<circle cx="500" cy="238" r="2.5"></circle>
+</g>
+<!-- Outlier Rejected Vectors (Red Dashed + Red Crosses) -->
+<g opacity="0.9" stroke="#ffb4ab" stroke-dasharray="3 3" stroke-width="1.2">
+<!-- False shadow match outlier 1 -->
+<line x1="80" x2="620" y1="120" y2="240"></line>
+<!-- Sun shadow divergence outlier 2 -->
+<line x1="360" x2="460" y1="220" y2="70"></line>
+<!-- Deep boulder crater miscorrelation outlier 3 -->
+<line x1="120" x2="740" y1="70" y2="190"></line>
+</g>
+<!-- Outlier markers: Crosshairs -->
+<g stroke="#ffb4ab" stroke-width="1.5">
+<!-- Outlier 1 -->
+<line x1="76" x2="84" y1="116" y2="124"></line>
+<line x1="84" x2="76" y1="116" y2="124"></line>
+<line x1="616" x2="624" y1="236" y2="244"></line>
+<line x1="624" x2="616" y1="236" y2="244"></line>
+<!-- Outlier 2 -->
+<line x1="356" x2="364" y1="216" y2="224"></line>
+<line x1="364" x2="356" y1="216" y2="224"></line>
+<line x1="456" x2="464" y1="66" y2="74"></line>
+<line x1="464" x2="456" y1="66" y2="74"></line>
+<!-- Outlier 3 -->
+<line x1="116" x2="124" y1="66" y2="74"></line>
+<line x1="124" x2="116" y1="66" y2="74"></line>
+<line x1="736" x2="744" y1="186" y2="194"></line>
+<line x1="744" x2="736" y1="186" y2="194"></line>
+</g>
+</svg>
+</div>
+</section>
+<!-- 4. PIPELINE SCHEMATIC & HOMOGRAPHY MATRIX SECTION (Split 2 Cols) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left: Compact Pipeline Node Graph (col-span-12 md:col-span-6) -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-low rounded p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-1 border-b border-surface-variant/40">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Algorithmic Node Flow</span>
+<span class="font-data-mono-xs text-data-mono-xs text-primary">PYTORCH · TENSORRT</span>
+</div>
+<!-- Mini Node Diagram -->
+<div class="py-3 flex flex-col gap-2">
+<!-- Node Row 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-secondary/40">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface">N1: RoI Extract</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">trending_flat</span>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-secondary/40">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface">N2: Rad Calib</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">trending_flat</span>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-secondary/40">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface">N3: Affine Warp</span>
+</div>
+</div>
+<!-- Wire Down -->
+<div class="flex justify-end pr-10">
+<span class="material-symbols-outlined text-primary text-[16px]">arrow_downward</span>
+</div>
+<!-- Node Row 2 (Active Step 4) -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-surface-variant text-outline">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-data-mono-xs text-data-mono-xs">N6: SuperGlue</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">west</span>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-surface-variant text-outline">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-data-mono-xs text-data-mono-xs">N5: SuperPoint</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]">west</span>
+<div class="flex items-center gap-1.5 bg-primary-container px-2 py-1 rounded shadow-sm text-white">
+<span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+<span class="font-data-mono-xs text-data-mono-xs font-semibold">N4: CLAHE Norm</span>
+</div>
+</div>
+<!-- Wire Down -->
+<div class="flex justify-start pl-8">
+<span class="material-symbols-outlined text-outline-variant text-[16px]">arrow_downward</span>
+</div>
+<!-- Node Row 3 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-surface-variant text-outline">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-data-mono-xs text-data-mono-xs">N7: RANSAC Filter</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">trending_flat</span>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-surface-variant text-outline">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-data-mono-xs text-data-mono-xs">N8: Homography H</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">trending_flat</span>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-1 rounded border border-surface-variant text-outline">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-data-mono-xs text-data-mono-xs">N12: GeoTIFF Ingest</span>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-variant/40 flex justify-between items-center text-outline font-data-mono-xs text-data-mono-xs">
+<span>THREAD STATUS: WORKER_03 BUSY</span>
+<span class="text-secondary font-semibold">EST. TIME TO COMPLETION: 4.8s</span>
+</div>
+</div>
+<!-- Right: 3x3 Homography Matrix (H) Elevated Card (col-span-12 md:col-span-6) -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-low rounded p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-1 border-b border-surface-variant/40">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Homography Matrix (H)</span>
+<span class="font-data-mono-xs text-data-mono-xs text-secondary bg-secondary/10 px-1 py-0.5 rounded">CONVERGED</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-primary px-2 py-0.5 rounded font-data-mono-xs text-data-mono-xs flex items-center gap-1 transition-colors" title="Copy 3x3 array to clipboard" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span> Copy Matrix
+            </button>
+</div>
+<!-- 3x3 Monospace Array Grid -->
+<div class="grid grid-cols-3 gap-1.5 my-2">
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">+0.998421</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[0,0] scale_x</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">-0.012480</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[0,1] shear_x</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-secondary/40">
+<span class="font-data-mono-md text-data-mono-md text-secondary font-semibold">+14.2851</span>
+<span class="block font-data-mono-xs text-[9px] text-secondary">H[0,2] ΔX (px)</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">+0.012415</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[1,0] shear_y</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">+0.998510</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[1,1] scale_y</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-secondary/40">
+<span class="font-data-mono-md text-data-mono-md text-secondary font-semibold">-08.6410</span>
+<span class="block font-data-mono-xs text-[9px] text-secondary">H[1,2] ΔY (px)</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">-0.000002</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[2,0] proj_x</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">+0.000001</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[2,1] proj_y</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center border border-surface-variant/40">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">+1.000000</span>
+<span class="block font-data-mono-xs text-[9px] text-outline">H[2,2] norm</span>
+</div>
+</div>
+<!-- Parameter Summary Sub-label -->
+<div class="bg-surface-container-lowest px-2 py-1.5 rounded flex flex-wrap justify-between items-center text-outline font-data-mono-xs text-data-mono-xs">
+<span>SCALE: <strong class="text-on-surface">1.0002</strong></span>
+<span>ROTATION: <strong class="text-on-surface">+0.715°</strong></span>
+<span>TRANSLATION: <strong class="text-secondary">Δx +14.29, Δy -8.64 px</strong></span>
+</div>
+</div>
+</section>
+<!-- 5. OUTPUT PREVIEW & RESIDUAL HEATMAP SECTION -->
+<section class="bg-surface-container-low rounded p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-variant/40">
+<!-- Underline Indicator Tabs -->
+<div class="flex items-center gap-4">
+<button class="font-headline-sm text-headline-sm text-primary border-b-2 border-primary pb-1 font-semibold flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">layers</span> Registered Image (Warped)
+            </button>
+<button class="font-headline-sm text-headline-sm text-outline hover:text-on-surface border-b-2 border-transparent pb-1 transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">difference</span> Difference Map &amp; Heatmap Residuals
+            </button>
+</div>
+<!-- Heatmap Error Legend -->
+<div class="flex items-center gap-2 font-data-mono-xs text-data-mono-xs">
+<span class="text-outline">RESIDUAL RANGE:</span>
+<div class="flex items-center gap-1">
+<span class="text-secondary">0.0 px</span>
+<div class="w-24 h-2 rounded bg-gradient-to-r from-secondary via-tertiary to-error"></div>
+<span class="text-error">&gt; 2.5 px</span>
+</div>
+</div>
+</div>
+<!-- Aligned Preview Split Overlay -->
+<div class="relative w-full h-64 rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img alt="Warped OHRC Result with heat overlay" class="w-full h-full object-cover object-center filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAibcr0woqgFL6psbU-haeqaj6N2eMSCDfM9ALfk96Ttum2_TeA6nE3kxpLDJK6U5hk6iBN6WfwnYniIY0-fJexY_g5v0E_W81AgzJVNle4VJ9KInocyvfaSin2xO-CS-u9MoesWVl46MLBF3UueDc7FIIsR8OV7701FRS3tGywgDwK72mk5Y95mfJ2OBqYH1xMJLZeVMC6tLM8E7AyZshRzx0OS3JqHF3eEnlRHDqotM8Eyl_-78xo"/>
+<!-- Synthetic Residual Gradient Heatmap Overlay -->
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/10 via-transparent to-tertiary/15 pointer-events-none"></div>
+<!-- Corner Telemetry Badges -->
+<div class="absolute top-2 left-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-1 rounded font-data-mono-xs text-data-mono-xs text-on-surface">
+            WARP KERNEL: BICUBIC SPLINE // CH2_WARPED_TO_NAC_M114.TIF
+          </div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-1 rounded font-data-mono-xs text-data-mono-xs text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 99.1% OF REPROJECTION RESIDUALS &lt; 0.50 px
+          </div>
+</div>
+</section>
+<!-- 6. CONSOLE LOG & QUICK ACTIONS SECTION (Full-Width Bottom Panel) -->
+<section class="bg-surface-container-low rounded p-3 flex flex-col gap-2">
+<!-- Quick Action Trigger Bar -->
+<div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-surface-variant/40">
+<div class="flex items-center gap-2">
+<!-- Run Current Step Primary Action -->
+<button class="bg-primary-container hover:bg-primary-container/85 text-white px-3 py-1.5 rounded font-headline-sm text-headline-sm flex items-center gap-1.5 shadow transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span> Run Current Step (Step 04)
+            </button>
+<!-- Run All Pipeline Steps -->
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-3 py-1.5 rounded font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span> Run All Remaining Steps
+            </button>
+<!-- Stop / Abort Button (Outline Red Disabled) -->
+<button class="border border-error text-error/50 cursor-not-allowed px-3 py-1.5 rounded font-headline-sm text-headline-sm flex items-center gap-1.5 opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span> Stop / Abort
+            </button>
+</div>
+<!-- Hardware Telemetry & GPU Toggle -->
+<div class="flex items-center gap-3 bg-surface-container-lowest px-2.5 py-1 rounded border border-surface-variant/40">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">memory</span>
+<span class="font-data-mono-xs text-data-mono-xs text-on-surface">GPU ACCELERATION (CUDA 12.2)</span>
+</div>
+<div class="w-8 h-4 bg-secondary/30 rounded-full flex items-center p-0.5">
+<div class="w-3 h-3 bg-secondary rounded-full ml-auto"></div>
+</div>
+</div>
+</div>
+<!-- Monospaced Terminal Output Drawer -->
+<div class="h-28 bg-surface-container-lowest rounded p-2 overflow-y-auto font-data-mono-xs text-data-mono-xs space-y-1">
+<div class="text-outline flex gap-2">
+<span class="text-outline-variant">[04:12:10.104]</span>
+<span class="text-primary font-semibold">[INFO]</span>
+<span class="text-on-surface-variant">Loaded OHRC tile CH2_OHRC_20230814T0412_T09.IMG (4096x4096px, 16-bit radiometric raw)</span>
+</div>
+<div class="text-outline flex gap-2">
+<span class="text-outline-variant">[04:12:11.450]</span>
+<span class="text-secondary font-semibold">[SUCCESS]</span>
+<span class="text-on-surface-variant">Geometric Pre-Warp completed in 1.34s via CUDA kernel. Affine prior established.</span>
+</div>
+<div class="text-outline flex gap-2">
+<span class="text-outline-variant">[04:12:12.890]</span>
+<span class="text-tertiary font-semibold">[RUNNING]</span>
+<span class="text-white">Step 04: Intensity Normalization executing (CLAHE clip_limit=2.0, tile_grid=8x8)...</span>
+</div>
+<div class="text-outline flex gap-2">
+<span class="text-outline-variant">[04:12:13.102]</span>
+<span class="text-primary font-semibold">[INFO]</span>
+<span class="text-on-surface-variant">Computing cumulative histogram equalization across overlap polygon (14.8 km²)...</span>
+</div>
+<div class="text-outline flex gap-2">
+<span class="text-outline-variant">[04:12:13.415]</span>
+<span class="text-secondary font-semibold">[SUCCESS]</span>
+<span class="text-secondary">Histogram matched with Pearson correlation r=0.941. Standby for SuperPoint feature extraction.</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main></div></body></html>
