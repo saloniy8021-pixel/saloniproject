@@ -1,56 +1,81 @@
 # 🌙 Chandrayaan-2 Lunar Image Registration Tool
 
-> **SuperPoint + SuperGlue Based Multi-Sensor Orbital Registration Platform**  
-> Developed for ISRO / ISDA (ISRO Planetary Data System) to perform precision sub-pixel registration, hyperspectral band selection, and homography alignment between Chandrayaan-2 IIRS (Hyperspectral), WAC (Wide Angle Camera), and TMC-2 (Terrain Mapping Camera) datasets.
+> **SuperPoint + SuperGlue Deep Learning Based Multi-Sensor Lunar Orbital Raster Registration Platform**  
+> Developed for ISRO / ISDA (ISRO Planetary Data System) to perform automated sub-pixel co-registration, phase correlation coarse offset calculation, SuperPoint keypoint extraction, SuperGlue GNN correspondence matching, and polynomial homography warping between Chandrayaan-2 OHRC (0.28 m/px) and LROC NAC (1.10 m/px) lunar surface imagery.
 
 ---
 
-## 🌟 Key Features & UI Components
+## 🌟 Key Features & Innovations
 
-- 🌗 **Light & Dark Theme Toggle**: Instant switching between **Deep Space Dark Mode** (`#0B101D`) and **Clean Light Slate Mode** (`#F8FAFC`).
-- 🛰️ **Hyperspectral 3D Data Cube Loader**: Visualizes IIRS data cubes (`512 x 512 x 242`, `0.8 - 5.0 µm`), WAC Visible references (`1024 x 1024`), and TMC-2 passes.
-- 📈 **Interactive IIRS Band Selector**: Plotting spectral reflectance curves (Wavelength vs Feature Score) with red cursor indication for Band 73 (`1.43 µm`, Score: `0.87`).
-- 🔍 **Dual Synchronized Viewports**: High-resolution lunar crater viewports with zoom in/out, pan, crosshair reticle, rotation, and synced dual viewport navigation.
-- 🟢 **SuperGlue + RANSAC Match Visualizer**: Side-by-side match vector engine rendering green inlier match lines and red outlier keypoint dots.
-- 📐 **3x3 Homography Matrix (H) Generator**: Real-time 9-parameter matrix computation with one-click clipboard copying.
-- 📋 **12-Step Process Pipeline**: Guided pipeline tracking step completion from *Data Loading* to *RANSAC Outlier Rejection* and *Export*.
-- 💻 **Real-Time Terminal Console & Quick Actions**: Live timestamped event logging, `Run Current Step`, `Run All Steps`, `Stop`, and NVIDIA RTX 3060 CUDA GPU acceleration controls.
-- 🖼️ **Output Preview Suite**: Tabbed preview switching between *Registered Image Output* and *Difference Map Heatmap*.
+- ⚙️ **Complete 12-Step Automated Pipeline**:
+  1. **Data Loading**: Ingestion of raw PDS4 lunar orbital rasters (OHRC 0.28 m/px & NAC 1.10 m/px).
+  2. **Georeferencing**: Lunar coordinate system transformation (EPSG:104903 Moon 2000 CRS).
+  3. **Resolution Resampling**: Bicubic resampling of OHRC to match NAC ground sampling distance (GSD).
+  4. **Intensity Normalization**: CLAHE (Clip=2.0) histogram equalization for illumination balancing.
+  5. **Automatic Coarse Alignment**: 2D Fourier phase correlation offset solver ($\Delta X = +14.2\text{px}, \Delta Y = -8.7\text{px}$, Shift Vector $16.65\text{px}$, Rotation Drift $0.42^\circ$, Georef RMS $1.8\text{px}$).
+  6. **Feature Extraction (SuperPoint)**: Deep convolutional interest point detection ($4,812$ OHRC / $5,096$ NAC keypoints).
+  7. **Feature Matching (SuperGlue)**: Graph Neural Network optimal transport correspondence solver ($1,247$ matches, $0.81$ confidence).
+  8. **Outlier Rejection (RANSAC)**: Reprojection error filtering ($1,083$ inliers, $86.8\%$ consensus).
+  9. **Transformation Estimation**: 2nd-Order Polynomial transformation matrix optimization ($\text{RMSE} = 0.62\text{px}, R^2 = 0.9999$).
+  10. **Image Warping**: Bicubic spline raster deformation and mosaic composite creation.
+  11. **Evaluation**: Sub-pixel verification & difference heatmap error mapping ($0.62\text{px}$ shift error).
+  12. **Export Results**: One-click deliverable generation (GeoTIFF, Homography JSON, QA PDF Report).
+
+- 🔄 **Real-Time File Selection & Upload Synchronization**:
+  - Upload custom source or reference rasters (`.tif`, `.img`, `.IMG`, `.cube`, `.xml`, `.hdr`, `.json`, `.png`, `.jpg`).
+  - Native Windows File Explorer integration (Unrestricted file picker allowing instant access to Desktop & local drives).
+  - Automatic live synchronization of uploaded file metadata, tile titles, and image previews across **Source/Reference Cards**, **Dual Viewports**, and **Console Logs**.
+
+- 🔍 **Dual Synchronized Viewports & Interactive Controls**:
+  - Independent or synchronized dual-viewport zoom ($50\% - 300\%$) and pan.
+  - Crosshair reticle overlay with real-time lunar latitude/longitude coordinate readouts (`88.5°S, 0.2°E`).
+  - $90^\circ$ clockwise rotation, hand pan tool, and full-screen expansion mode.
+
+- 🌗 **Light & Dark Theme System**:
+  - Instant theme switching between **Deep Space Dark Mode** (`#0B101D`) and **Clean Light Slate Mode** (`#F8FAFC`).
+
+- 📊 **Polynomial Transformation Matrix P & Match Vector Visualizer**:
+  - Interactive 3x3 transformation matrix parameter table with single-click clipboard copy.
+  - Match vector overlay visualizer filtering between All Matches, Inliers, and Outliers.
 
 ---
 
 ## 🏗️ Tech Stack
 
-- **Framework:** React 18 + Vite 5 + TypeScript
-- **Styling:** Tailwind CSS + Custom Dark & Light Slate Design Tokens
+- **Core Framework:** React 18 + Vite 5 + TypeScript
+- **Styling & Theme:** Vanilla CSS + Tailwind CSS (Class-based dark/light theme tokens)
 - **Icons:** `lucide-react`
-- **Typography:** `Inter` (sans) & `JetBrains Mono` (telemetry & matrix font)
+- **Typography:** `Inter` (UI sans) & `JetBrains Mono` (telemetry, paths & matrix parameters)
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Architecture
 
 ```
 e:\Saloni - project/
 ├── index.html                  # HTML5 Entry Point
 ├── package.json                # Project dependencies & scripts
-├── vite.config.ts              # Vite configuration & esbuild optimization
+├── vite.config.ts              # Vite configuration & build optimization
 ├── tsconfig.json               # TypeScript compiler rules
 ├── tailwind.config.js          # Tailwind theme tokens (darkMode: 'class')
 ├── postcss.config.js           # PostCSS configuration
 ├── README.md                   # Project documentation
 └── src/
     ├── main.tsx                # React Root Entry Point
-    ├── App.tsx                 # Core App layout, Theme state & Event handlers
-    ├── index.css               # Global Tailwind directives & scrollbar styling
+    ├── App.tsx                 # Core App layout, Theme state & Global Provider
+    ├── index.css               # Global Tailwind directives & custom scrollbars
+    ├── context/
+    │   └── AppStateContext.tsx # Centralized State (Tiles, Pipeline, Logs, Modal)
     └── components/
-        ├── Header.tsx          # Top nav bar, moon logo & Light/Dark Theme toggle
-        ├── Sidebar.tsx         # 12-Step Workflow Steps & Project Info card
-        ├── DataLoadingSection.tsx # Sensor cards & spectral band curve graph
-        ├── ViewportsSection.tsx   # Source & Reference dual viewports with toolbars
+        ├── Header.tsx          # Top navigation bar, telemetry status & Theme toggle
+        ├── Sidebar.tsx         # Interactive 12-Step Pipeline Workflow Navigation
+        ├── DataLoadingSection.tsx # Source (OHRC) & Reference (NAC) tile cards
+        ├── ViewportsSection.tsx   # Dual synchronized lunar image viewports with reticle
         ├── MatchOverviewSection.tsx # SuperGlue/RANSAC match vector visualizer
-        ├── PipelineMatrixSection.tsx # Process Pipeline & 3x3 Homography Matrix H
-        └── ConsoleActionsSection.tsx # Terminal console, Quick Actions & Output Preview
+        ├── PipelineProcessView.tsx  # Detailed live step execution view & offset metrics
+        ├── PipelineMatrixSection.tsx # 3x3 Polynomial Transformation Matrix P viewer
+        ├── ConsoleActionsSection.tsx # Telemetry terminal console & pipeline execution buttons
+        └── Modals.tsx          # Change Tile, Upload, New/Open Project & Settings dialogs
 ```
 
 ---
@@ -75,17 +100,22 @@ npm run dev
 The application will be accessible at:
 🌐 **`http://localhost:3005/`**
 
+### 4. Production Build
+To validate or build the application bundle for production:
+```bash
+npm run build
+```
+
 ---
 
 ## ⚡ Interactive Testing Checklist
 
-- [x] **Theme Toggle:** Click the **Light Mode / Dark Mode** button in the header bar to switch themes.
-- [x] **Workflow Navigation:** Click any step (1 to 12) in the left sidebar to change active pipeline state.
-- [x] **Hyperspectral Band Selection:** Click **Change Band** in the Data Loading card to set a custom band (1-242).
-- [x] **Viewports Sync Zoom:** Click the **Link** icon in the Reference viewport to toggle synchronized zooming.
-- [x] **Copy Homography Matrix:** Click **Copy Matrix** in the bottom right panel to copy matrix values to your clipboard.
-- [x] **Execute Pipeline:** Click **Run Current Step** or **Run All Steps** in Quick Actions to view real-time terminal output.
-- [x] **Output Preview:** Toggle between **Registered Image (Preview)** and **Difference Map** tabs.
+- [x] **Theme Toggle**: Click the **Light / Dark Mode** toggle in the top-right header to switch themes.
+- [x] **12-Step Pipeline**: Click **Automatic Coarse Alignment** (Step 5) in the left sidebar or process view to inspect phase correlation translation shift ($\Delta X = +14.2\text{px}, \Delta Y = -8.7\text{px}$) and georeferencing error ($1.8\text{px}$ RMS).
+- [x] **File Upload & Sync**: Click **Select / Change OHRC Tile** or **Select / Change NAC Tile**, choose any file from Desktop, click **Confirm & Apply**, and verify live filename & image preview update across cards and viewports.
+- [x] **Dual Viewport Sync**: Click the **SYNCED / LINK** button in the Reference viewport to enable/disable synchronized zooming and panning.
+- [x] **Copy Matrix**: Click **Copy Matrix** in the Polynomial Transformation Matrix panel to copy parameters to clipboard.
+- [x] **Pipeline Execution**: Click **Run Current Step** or **Run All Steps** in the bottom control panel to execute automated registration.
 
 ---
 
