@@ -118,15 +118,19 @@ export const DataLoadingSection: React.FC = () => {
         {/* CARD 3: INTENSITY NORMALIZATION (HISTOGRAM OVERLAY) */}
         <div className={`${cardBg} border rounded-xl p-3 flex flex-col justify-between transition-colors min-h-[165px]`}>
           <div>
-            <div className="flex items-center justify-between mb-1.5">
+            <div className="flex items-center justify-between mb-2">
               <h3 className={`text-[10.5px] font-bold uppercase tracking-tight ${textTitle}`}>
                 HISTOGRAM NORMALIZATION
               </h3>
-              <span className="text-[9px] font-mono text-[#22C55E] font-bold">CLAHE 2.0</span>
+              <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded border ${
+                darkMode ? 'bg-emerald-950/80 text-[#22C55E] border-emerald-800' : 'bg-emerald-50 text-emerald-700 border-emerald-200'
+              }`}>
+                CLAHE 2.0
+              </span>
             </div>
 
             {/* SVG Before/After Histogram overlay chart */}
-            <div className={`h-14 w-full border rounded-lg p-1 relative overflow-hidden flex items-center justify-center ${
+            <div className={`h-14 w-full border rounded-lg p-1.5 relative overflow-hidden flex items-center justify-center ${
               darkMode ? 'bg-[#080C16] border-[#1F2937]' : 'bg-slate-900 border-slate-800'
             }`}>
               <svg viewBox="0 0 200 50" className="w-full h-full">
@@ -147,15 +151,18 @@ export const DataLoadingSection: React.FC = () => {
                   strokeWidth="1.8"
                 />
               </svg>
-              <div className="absolute bottom-1 right-2 text-[8px] font-mono text-slate-300 bg-black/70 px-1 rounded">
-                Diff: 34% → 4%
-              </div>
             </div>
           </div>
 
-          <div className="mt-1 flex justify-between items-center text-[10px] font-mono">
-            <span className={textSub}>Mean Match:</span>
-            <span className="text-[#22C55E] font-bold">96.0% (Matched)</span>
+          <div className="mt-1 space-y-0.5 text-[10px] font-mono">
+            <div className="flex justify-between items-center">
+              <span className={textSub}>Mean Shift Diff:</span>
+              <span className="text-amber-400 font-bold">34% → 4.1%</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className={textSub}>Histogram Match:</span>
+              <span className="text-[#22C55E] font-bold">96.0% (Matched)</span>
+            </div>
           </div>
         </div>
 

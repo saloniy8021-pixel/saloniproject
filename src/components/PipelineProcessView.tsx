@@ -325,42 +325,41 @@ export const PipelineProcessView: React.FC = () => {
         {/* Before / After Visual Frame Preview Cards (Input Frame vs Warped Output Frame) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
           {/* Card 1: Input Frame */}
-          <div className={`rounded-2xl border p-3 flex flex-col transition-all ${
+          <div className={`rounded-2xl border p-3.5 flex flex-col transition-all ${
             darkMode ? 'bg-[#080C16] border-[#1F2937]' : 'bg-slate-50/80 border-slate-200'
           }`}>
             {/* Card Header Bar */}
-            <div className="flex items-center justify-between mb-2.5 px-1">
-              <h4 className={`text-xs font-bold uppercase tracking-wider ${
-                darkMode ? 'text-slate-200' : 'text-slate-800'
-              }`}>
-                Input Frame
-              </h4>
-              <span className={`text-[10px] font-mono font-medium ${
-                darkMode ? 'text-slate-400' : 'text-slate-500'
-              }`}>
-                {stepInfo.inputFrameTitle}
-              </span>
-            </div>
+            <div className="flex items-center justify-between mb-3 px-0.5">
+              <div className="flex items-center gap-2">
+                <h4 className={`text-xs font-bold uppercase tracking-wider ${
+                  darkMode ? 'text-slate-200' : 'text-slate-800'
+                }`}>
+                  Input Frame
+                </h4>
+                <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
+                  darkMode ? 'bg-[#0B101D] border-[#1F2937] text-slate-400' : 'bg-slate-200/60 border-slate-300 text-slate-600'
+                }`}>
+                  {stepInfo.inputFrameTitle}
+                </span>
+              </div>
 
-            {/* Frame Container */}
-            <div className={`relative h-60 md:h-64 rounded-xl border-2 border-[#22C55E]/60 overflow-hidden ${frameContainerBg} shadow-inner group flex items-center justify-center`}>
-              {/* Floating Interactive Zoom Toolbar */}
-              <div className={`absolute top-2.5 right-2.5 z-20 flex items-center gap-1 p-1 rounded-xl shadow-xl backdrop-blur-md border ${
-                darkMode ? 'bg-[#0B101D]/90 border-[#1F2937] text-slate-200' : 'bg-white/95 border-slate-300 text-slate-800'
+              {/* Clean Header Zoom Toolbar */}
+              <div className={`flex items-center gap-1 px-2 py-1 rounded-lg border ${
+                darkMode ? 'bg-[#0B101D] border-[#1F2937] text-slate-300' : 'bg-white border-slate-300 text-slate-700'
               }`}>
                 <button
                   onClick={zoomOutInput}
-                  className="p-1 rounded-lg hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
+                  className="p-0.5 rounded hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
                   title="Zoom Out (-)"
                 >
                   <ZoomOut className="w-3.5 h-3.5" />
                 </button>
-                <span className="text-[10px] font-mono font-bold px-1.5 min-w-[36px] text-center">
+                <span className="text-[10px] font-mono font-bold px-1 min-w-[32px] text-center text-[#2F6BFF]">
                   {Math.round(inputZoom * 100)}%
                 </span>
                 <button
                   onClick={zoomInInput}
-                  className="p-1 rounded-lg hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
+                  className="p-0.5 rounded hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
                   title="Zoom In (+)"
                 >
                   <ZoomIn className="w-3.5 h-3.5" />
@@ -368,16 +367,19 @@ export const PipelineProcessView: React.FC = () => {
                 <div className="w-[1px] h-3 bg-slate-500/30 mx-0.5" />
                 <button
                   onClick={resetInputZoom}
-                  className="p-1 rounded-lg hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
+                  className="p-0.5 rounded hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
                   title="Reset Zoom (100%)"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                 </button>
               </div>
+            </div>
 
+            {/* Frame Container */}
+            <div className={`relative h-60 md:h-64 rounded-xl border border-emerald-500/50 overflow-hidden ${frameContainerBg} shadow-inner flex items-center justify-center`}>
               {/* Lunar Crater Photo with Dynamic Zoom Transform */}
               <div 
-                className="w-full h-full relative transition-transform duration-200 ease-out"
+                className="w-full h-full relative transition-transform duration-200 ease-out flex items-center justify-center"
                 style={{ transform: `scale(${inputZoom})`, transformOrigin: 'center center' }}
               >
                 <img
@@ -403,40 +405,39 @@ export const PipelineProcessView: React.FC = () => {
           </div>
 
           {/* Card 2: Warped Output Frame */}
-          <div className={`rounded-2xl border p-3 flex flex-col transition-all ${
+          <div className={`rounded-2xl border p-3.5 flex flex-col transition-all ${
             darkMode ? 'bg-[#080C16] border-[#1F2937]' : 'bg-slate-50/80 border-slate-200'
           }`}>
             {/* Card Header Bar */}
-            <div className="flex items-center justify-between mb-2.5 px-1">
-              <h4 className={`text-xs font-bold uppercase tracking-wider ${
-                darkMode ? 'text-slate-200' : 'text-slate-800'
-              }`}>
-                Warped Output Frame
-              </h4>
-              <span className="text-[10px] font-mono text-emerald-500 font-bold">
-                {stepInfo.outputFrameTitle}
-              </span>
-            </div>
+            <div className="flex items-center justify-between mb-3 px-0.5">
+              <div className="flex items-center gap-2">
+                <h4 className={`text-xs font-bold uppercase tracking-wider ${
+                  darkMode ? 'text-slate-200' : 'text-slate-800'
+                }`}>
+                  Warped Output Frame
+                </h4>
+                <span className="text-[10px] font-mono text-emerald-400 font-bold px-2 py-0.5 rounded border bg-emerald-950/60 border-emerald-800">
+                  {stepInfo.outputFrameTitle}
+                </span>
+              </div>
 
-            {/* Frame Container */}
-            <div className={`relative h-60 md:h-64 rounded-xl overflow-hidden p-1 flex items-center justify-center ${frameContainerBg} shadow-inner`}>
-              {/* Floating Interactive Zoom Toolbar */}
-              <div className={`absolute top-2.5 right-2.5 z-20 flex items-center gap-1 p-1 rounded-xl shadow-xl backdrop-blur-md border ${
-                darkMode ? 'bg-[#0B101D]/90 border-[#1F2937] text-slate-200' : 'bg-white/95 border-slate-300 text-slate-800'
+              {/* Clean Header Zoom Toolbar */}
+              <div className={`flex items-center gap-1 px-2 py-1 rounded-lg border ${
+                darkMode ? 'bg-[#0B101D] border-[#1F2937] text-slate-300' : 'bg-white border-slate-300 text-slate-700'
               }`}>
                 <button
                   onClick={zoomOutWarped}
-                  className="p-1 rounded-lg hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
+                  className="p-0.5 rounded hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
                   title="Zoom Out (-)"
                 >
                   <ZoomOut className="w-3.5 h-3.5" />
                 </button>
-                <span className="text-[10px] font-mono font-bold px-1.5 min-w-[36px] text-center">
+                <span className="text-[10px] font-mono font-bold px-1 min-w-[32px] text-center text-[#22C55E]">
                   {Math.round(warpedZoom * 100)}%
                 </span>
                 <button
                   onClick={zoomInWarped}
-                  className="p-1 rounded-lg hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
+                  className="p-0.5 rounded hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
                   title="Zoom In (+)"
                 >
                   <ZoomIn className="w-3.5 h-3.5" />
@@ -444,18 +445,21 @@ export const PipelineProcessView: React.FC = () => {
                 <div className="w-[1px] h-3 bg-slate-500/30 mx-0.5" />
                 <button
                   onClick={resetWarpedZoom}
-                  className="p-1 rounded-lg hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
+                  className="p-0.5 rounded hover:bg-blue-500/20 hover:text-[#2F6BFF] transition-colors cursor-pointer"
                   title="Reset Zoom (100%)"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                 </button>
               </div>
+            </div>
 
-              {/* Warped Frame Container with Dynamic Rotation & Zoom Transform */}
+            {/* Frame Container */}
+            <div className={`relative h-60 md:h-64 rounded-xl border border-emerald-500/50 overflow-hidden ${frameContainerBg} shadow-inner flex items-center justify-center`}>
+              {/* Warped Frame Container with Clean Zoom Transform */}
               <div 
-                className="w-full h-full relative rounded-lg border-2 border-dashed border-[#22C55E] overflow-hidden bg-black transition-transform duration-200 ease-out"
+                className="w-full h-full relative transition-transform duration-200 ease-out flex items-center justify-center"
                 style={{ 
-                  transform: `rotate(-2.2deg) scale(${warpedZoom * 1.02}) skewX(0.8deg)`, 
+                  transform: `scale(${warpedZoom})`, 
                   transformOrigin: 'center center' 
                 }}
               >
