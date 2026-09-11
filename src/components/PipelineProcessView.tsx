@@ -330,18 +330,11 @@ export const PipelineProcessView: React.FC = () => {
           }`}>
             {/* Card Header Bar */}
             <div className="flex items-center justify-between mb-3 px-0.5">
-              <div className="flex items-center gap-2">
-                <h4 className={`text-xs font-bold uppercase tracking-wider ${
-                  darkMode ? 'text-slate-200' : 'text-slate-800'
-                }`}>
-                  Input Frame
-                </h4>
-                <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
-                  darkMode ? 'bg-[#0B101D] border-[#1F2937] text-slate-400' : 'bg-slate-200/60 border-slate-300 text-slate-600'
-                }`}>
-                  {stepInfo.inputFrameTitle}
-                </span>
-              </div>
+              <h4 className={`text-xs font-bold uppercase tracking-wider ${
+                darkMode ? 'text-slate-200' : 'text-slate-800'
+              }`}>
+                Input Frame
+              </h4>
 
               {/* Clean Header Zoom Toolbar */}
               <div className={`flex items-center gap-1 px-2 py-1 rounded-lg border ${
@@ -410,16 +403,11 @@ export const PipelineProcessView: React.FC = () => {
           }`}>
             {/* Card Header Bar */}
             <div className="flex items-center justify-between mb-3 px-0.5">
-              <div className="flex items-center gap-2">
-                <h4 className={`text-xs font-bold uppercase tracking-wider ${
-                  darkMode ? 'text-slate-200' : 'text-slate-800'
-                }`}>
-                  Warped Output Frame
-                </h4>
-                <span className="text-[10px] font-mono text-emerald-400 font-bold px-2 py-0.5 rounded border bg-emerald-950/60 border-emerald-800">
-                  {stepInfo.outputFrameTitle}
-                </span>
-              </div>
+              <h4 className={`text-xs font-bold uppercase tracking-wider ${
+                darkMode ? 'text-slate-200' : 'text-slate-800'
+              }`}>
+                Warped Output Frame
+              </h4>
 
               {/* Clean Header Zoom Toolbar */}
               <div className={`flex items-center gap-1 px-2 py-1 rounded-lg border ${
